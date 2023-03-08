@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Sans:wght@300;500;700&family=Noto+Serif:wght@400;700&display=swap');
+
+
+:root {
+    --background: #faf9f4;
+    --contour: #b8afff;
+    --star: #f7f639 ;
+    --circle :#f3d833;
+    --triangle: #8cc1a7;
+    --square: #b8afff;
+    --footer: #b8afff;
+    }
+
+html{
+    font-size: 62.5%;
+    }
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans";
+}
+
+body{
+    background: var(--background);
+}
+
+.roundedbtn{
+    display: inline-flex;
+    align-items:center;
+    height: 60px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.roundedbtn:hover {
+    background-color: var(--star);
+    box-shadow: -3px 3px 0px 0px var(--contour), -5px 5px 0px 0px black, -8px 8px 0px 0px var(--triangle), -10px 10px 0px 0px black;
+    transform: translateY(-10px) translateX(10px);
+}
+
+.smallbtn{
+    display: inline-flex;
+    align-items:center;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.smallbtn:hover{
+    background-color: var(--star);
+    box-shadow: -3px 3px 0px 0px var(--contour), -5px 5px 0px 0px black, -8px 8px 0px 0px var(--triangle), -10px 10px 0px 0px black;
+    transform: translateY(-10px) translateX(10px);
+}
+
+
+.playbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: var(--triangle);
+    border: 2px solid black;
+    border-radius: 35px;
+}
+
+.playbtn div{
+    margin-left: 5px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-right: 0;
+    border-left: 24px solid black;
+}
+
+.playbtn div::before{
+    position: absolute;
+    top: -11px;
+    left: -22px;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 11px solid transparent;
+    border-right: 0;
+    border-left: 19px solid var(--circle);
+    
+}
+
+.iconbtn{
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+/*-------------- HEADER --------------*/
+
+header{
+    margin: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 2.4em;
+}
+
+.btn-main{
+    display: none;
+}
+
+.btn-side{
+    display: none;
+}
+
+.menu{
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--triangle);
+}
+/*-------------- MAIN --------------*/
+
+
+.bgimage {
+    width: 100px;
+    position: absolute;  
+    z-index: -1; 
+}
+
+.headphone {
+    bottom: -80px;
+    right: 30%;
+    transform: rotate(-20deg);
+}
+
+.microscope{
+    top: 340px;
+    right: 5%;
+    transform: rotate(20deg);
+}
+
+.planet{
+    top: 140px;
+    left: 5%;
+    transform: rotate(-20deg);
+}
+
+.science{
+    bottom: 250px;
+    left: 5%;
+    transform: rotate(-20deg);
+}
+
+.toy{
+    top: 250px;
+    left: 10%;
+    transform: rotate(-20deg);
+}
+
+.book{
+    bottom: 650px;
+    right: 2%;
+    transform: rotate(20deg);
+}
+
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+ 
+}
+
+.hero button{
+    background: none;
+    border: none;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+/*-------------- EVENT SECTION --------------*/
+
+.events{
+    min-height: 1500px; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between; 
+    position: relative;
+}
+
+.events h2{
+    font-family: "Noto Serif";
+    font-weight: bold;
+    font-size: 2.4em;
+}
+
+
+.star{
+    width: 400px;
+    height: 400px;
+    padding: 70px;
+    background: black;
+    clip-path: polygon(10% 50%,0% 60%, 13% 66%, 9% 79%, 23% 79%, 24% 93%, 37% 88%, 45% 100%, 54% 89%, 65% 98%, 69% 84%, 82% 87%, 82% 73%, 95% 70%, 88% 58%, 100% 50%, 88% 42%, 95% 30%, 81% 27%, 82% 13%, 69% 16%, 65% 2%, 54% 11%, 45% 0%, 37% 12%, 24% 7%, 23% 21%, 9% 21%, 13% 34%, 0% 40%);
+    transform: rotate(-20deg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;     
+}
+
+.star::before{
+    content: "";
+    width: 394px;
+    height: 394px;
+    background: var(--star);
+    clip-path: polygon(10% 50%,0% 60%, 13% 66%, 9% 79%, 23% 79%, 24% 93%, 37% 88%, 45% 100%, 54% 89%, 65% 98%, 69% 84%, 82% 87%, 82% 73%, 95% 70%, 88% 58%, 100% 50%, 88% 42%, 95% 30%, 81% 27%, 82% 13%, 69% 16%, 65% 2%, 54% 11%, 45% 0%, 37% 12%, 24% 7%, 23% 21%, 9% 21%, 13% 34%, 0% 40%);
+    position: absolute;
+    z-index: -1;
+}
+
+.star:hover{
+    
+    transform: translateY(-10px) translateX(10px) rotate(-20deg);
+    
+}
+
+.triangle{
+    width: 350px;
+    height: 300px;
+    padding: 30px 120px ;
+    background-color: black;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(20deg);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center; 
+}
+
+.triangle::before{
+    content: "";
+    width: 344px;
+    height: 294px;
+    background-color: var(--triangle);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    z-index: -1;
+}
+
+.triangle:hover{
+    transform: translateY(-10px) translateX(10px) rotate(20deg);
+}
+
+.circle{
+    width: 460px;
+    height: 460px;
+    border-radius: 230px;
+    padding: 120px 80px;
+    background: var(--circle);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    transform: rotate(-20deg);
+}
+
+.circle::before{
+    content: "";
+    width: 460px;
+    height: 460px;
+    border-radius: 230px;
+    border: 2px solid black;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+    
+}
+
+.circle::after{
+    content: "";
+    width: 340px;
+    height: 340px;
+    border-radius: 170px;
+    border: 2px solid black;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    z-index: -1;
+}
+
+.circle:hover{
+    transform: translateY(-10px) translateX(10px) rotate(-20deg); 
+}
+
+.circle button{
+    z-index: 2;
+}
+
+.curve-bigger{
+    display: none;
+}
+
+.curve{
+    width: 560px;
+    height: 560px;
+    position: absolute;
+    top: 10px;
+}
+
+path {
+    fill: transparent;
+  }
+  
+text {
+    font-family: "Noto Serif";
+    font-weight: bold;
+    font-size: 3em;
+  }
+
+
+.square{
+    background: var(--square);
+    height: 300px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    transform: rotate(-20deg);
+   
+}
+
+.square:hover{
+    transform: translateY(-10px) translateX(10px) rotate(-20deg);
+    
+}
+
+.square button{
+    position: absolute;
+    bottom: 30px;
+   
+}
+
+/*-------------- CARDS SECTION --------------*/
+
+.cards{
+    display: flex;
+    overflow: auto;
+    flex-direction: row;
+    gap: 50px;
+    padding: 40px; 
+}
+
+.cards .card{
+    flex:  1 0 auto;
+    position: relative;
+    background: white;
+    height: 600px;
+    max-width: 320px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px ;
+    padding-top: 10px;
+}
+
+.card:hover{
+    box-shadow: -5px 5px 0px 0px var(--contour), -7px 7px 0px 0px black, -13px 13px 0px 0px var(--triangle), -15px 15px 0px 0px black;
+    transform: translateY(-10px) translateX(10px);
+}
+
+.roundedtitle{
+    display: inline-flex;
+    align-items:center;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 40px;
+    margin: 30px 0;    
+    height: 60px;
+    background: var(--footer);
+    font-weight: 300;
+}
+
+
+.cards .orangebg {
+    background: linear-gradient( 0, white 63%, var(--triangle) 63%)
+}
+
+.cards img{
+    display: flex;
+    max-height: 200px;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.cards a{ 
+    font-size: 1.8em;
+    font-weight: 300;
+    color: black;
+    position: absolute;
+    bottom: 20px;
+
+}
+
+.cards .playbtn{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.playbtn:hover{
+    box-shadow: -3px 3px 0px 0px var(--contour), -5px 5px 0px 0px black, -8px 8px 0px 0px var(--triangle), -10px 10px 0px 0px black;
+    transform: translateY(-10px) translateX(10px);
+    background: var(--star);
+}
+/*-------------- FOOTER  --------------*/
+
+footer{
+    background: var(--footer);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 40px 40px;
+}
+
+.podcast{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.podcast button{
+    height: 35px;
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.apple {
+    background: url('/img/apple_podc.png')no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.spotify {
+    background: url('/img/spotify.jpg') no-repeat center ;
+    background-position: center;
+    background-size: contain;
+}
+
+.google {
+    background: url('/img/google_podc.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-size: 75%;
+}
+
+footer h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footermenu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footermenu button{
+    margin: 0px 10px 10px 0px;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+   
+    .hero button{
+        font-size: 6em;
+        line-height: 1.2em;
+    }
+    
+    .btn-main {
+        display: flex;
+        gap: 15px;
+    }
+
+    .events{
+        max-width: 1000px;
+    }
+
+    .starcontainer{
+        position: absolute;
+        top: 5%;
+        right: 30%;
+    }
+
+    .trianglecontainer{
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+
+    .circlecontainer{
+        position: absolute;
+        top: 40%;
+        left: 10%;
+    }
+
+    .squarecontainer{
+        position: absolute;
+        bottom: 15%;
+        right: 10%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+   
+    .hero button{
+        font-size: 10em;
+        line-height: 1.4em;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .btn-main {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn-side{
+        display: flex;
+        gap: 10px;    
+    }
+
+    .roundedbtn{
+        height: 80px;
+        padding: 30px;
+        border-radius: 40px;
+        font-size: 2.4em;
+    }
+    
+    .events{
+        max-width: 1600px;
+        margin: auto;
+        /* align-self: center; */
+    }
+    
+    .starcontainer{
+        position: absolute;
+        top: 5%;
+        right: 30%;
+    }
+
+    .trianglecontainer{
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+
+    .circlecontainer{
+        position: absolute;
+        top: 35%;
+        left: 10%;
+    }
+
+    .squarecontainer{
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+    }
+
+
+    .star{
+        width: 500px;
+        height: 500px;
+        padding: 70px;
+       
+    }
+
+    .star::before{
+        content: "";
+        width: 494px;
+        height: 494px;
+       
+    }
+
+    .triangle{
+        width: 450px;
+        height: 400px;
+        padding: 30px 120px ;
+        
+    }
+
+    .triangle::before{
+        content: "";
+        width: 444px;
+        height: 394px;
+      
+    }
+
+    .circle{
+        width: 560px;
+        height: 560px;
+        border-radius: 280px;
+        padding: 140px 80px;
+        gap: 15px;
+    }
+    
+    .circle::before{
+        content: "";
+        width: 560px;
+        height: 560px;
+        border-radius: 280px;      
+    }
+    
+    .circle::after{
+        content: "";
+        width: 440px;
+        height: 440px;
+        border-radius: 220px;
+    }
+    
+    .curve{
+        display: none;
+    }
+    
+    .curve-bigger{
+        display: block;
+        width: 560px;
+        height: 560px;
+        position: absolute;
+        top: 0px;
+    }
+      
+    text {
+        font-size: 3.8em;
+      }
+
+
+    .square{
+        height: 400px;
+        width: 550px;
+    }
+
+    .cards{
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    footer{
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .icons{
+        flex-wrap: wrap;
+        width: 120px;
+    }
+
+
+
+}
+
+
+
